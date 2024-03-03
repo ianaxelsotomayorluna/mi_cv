@@ -23,7 +23,14 @@ module.exports = {
   },
   overrides: [
     {
-      files: ["*.astro"],
+      files: ["*.tsx", "*.ts", "*.jsx", "*.js"], // Aplicar estas reglas solo a archivos JavaScript y TypeScript
+      rules: {
+        // Tus reglas específicas de React/JS/TS aquí
+      },
+    },
+    {
+      extends: ["plugin:astro/recommended"],
+      files: ["*.astro"], // Configuración específica para archivos Astro
       parser: "astro-eslint-parser",
       parserOptions: {
         parser: "@typescript-eslint/parser",
@@ -34,6 +41,14 @@ module.exports = {
       env: {
         "astro/astro": true,
         es2020: true,
+      },
+      rules: {
+        // Tus reglas específicas de Astro aquí
+        "react/react-in-jsx-scope": "off", // Desactivar reglas específicas de React para .astro
+        "react/jsx-uses-react": "off", // Desactivar reglas específicas de React para .astro
+        "react/jsx-uses-vars": "off", // Desactivar reglas específicas de React para .astro
+        // Desactiva cualquier otra regla de React que no sea aplicable a .astro
+        "prettier/prettier": "warn",
       },
     },
   ],
@@ -48,5 +63,6 @@ module.exports = {
         functions: "always-multiline",
       },
     ],
+    // Otros ajustes de reglas globales aquí
   },
 };
