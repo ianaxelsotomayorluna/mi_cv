@@ -17,7 +17,7 @@ module.exports = {
       jsx: true,
     },
     sourceType: "module",
-    project: ["./tsconfig.json"],
+    project: ["./tsconfig.eslint.json"],
     tsconfigRootDir: __dirname,
     ecmaVersion: 2020,
   },

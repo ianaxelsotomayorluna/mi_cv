@@ -1,0 +1,9 @@
+{
+  "extends": "./tsconfig.json",
+  "include": [
+    "**/*.ts",
+    "**/*.tsx",
+    "astro.config.mjs",
+    // Añade aquí otros archivos o patrones según sea necesario
+  ]
+}
