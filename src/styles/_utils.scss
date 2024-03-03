@@ -1,0 +1,93 @@
+@import "variables";
+
+/** Limita el número de lineas con una elipse $lines es el número de lineas a limitar */
+@mixin limitTextLines($lines) {
+  display: -webkit-box;
+  -webkit-line-clamp: $lines;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/** Limita el ancho máximo de un texto con una elipse */
+@mixin limitTextWidth($max-width) {
+  max-width: $max-width;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@mixin contentHeightDesktop() {
+  min-height: calc(100vh - ($headerHeight + $footerHeight));
+}
+
+@mixin contentHeightMobile() {
+  min-height: calc(100vh - ($headerHeight + $footerHeightMobile));
+}
+
+// --- MEDIA QUERIES
+$breakpoints: (
+  xs: "xs",
+  // Extra small devices (<576px)
+  sm: "sm",
+  // Small devices (≥576px)
+  md: "md",
+  // Medium devices (≥768px)
+  lg: "lg",
+  // Large devices (≥992px)
+  xl: "xl",
+  // Extra large devices (≥1200px)
+  xxl: "xxl",
+  // XXL devices (≥1600px)
+  mob: "mob",
+  // Mobile devices (<768px)
+  desk: "desk" // Desktop (>768px)
+);
+
+@mixin onlyIn($key) {
+  $type: map-get(
+    $map: $breakpoints,
+    $key: $key
+  );
+
+  @if $type == "xs" {
+    @media (max-width: 575px) {
+      @content;
+    }
+  } @else if $type == "sm" {
+    @media (min-width: 576px) and (max-width: 767px) {
+      @content;
+    }
+  } @else if $type == "md" {
+    @media (min-width: 768px) and (max-width: 991px) {
+      @content;
+    }
+  } @else if $type == "lg" {
+    @media (min-width: 992px) and (max-width: 1199px) {
+      @content;
+    }
+  } @else if $type == "xl" {
+    @media (min-width: 1200px) and (max-width: 1599px) {
+      @content;
+    }
+  } @else if $type == "xxl" {
+    @media (min-width: 1600px) {
+      @content;
+    }
+  } @else if $type == "mob" {
+    @media (max-width: 767px) {
+      @content;
+    }
+  } @else if $type == "desk" {
+    @media (min-width: 768px) {
+      @content;
+    }
+  }
+}
+
+.container {
+  max-width: 1320px;
+  margin-right: auto;
+  margin-left: auto;
+  padding: 0 5px;
+}

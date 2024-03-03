@@ -1,0 +1,36 @@
+// --- Filtro para generar una sombra detrás de la transparencia, permite leer color blanco sobre fondo blanco
+// &-light {
+//   .forge-spark-icon {
+//     img {
+//       filter: drop-shadow(0 0 10px rgb(0, 0, 0));
+//     }
+//   }
+// }
+ // Para textos blancos: filter: drop-shadow(0 0 15px rgb(0, 0, 0));
+
+//-----------------ExampleCont
+.ExampleCont {
+  .someContainer {
+    font-family: 'Inter';
+  }
+  &-desktop {
+    .someContainer {
+      font-family: 'Inter';
+    }
+  }
+  &-mobile {
+    .someContainer {
+      font-family: 'Inter';
+    }
+  }
+  &-dark {
+    .someContainer {
+      font-family: 'Inter';
+    }
+  }
+  &-light {
+    .someContainer {
+      font-family: 'Inter';
+    }
+  }
+}
