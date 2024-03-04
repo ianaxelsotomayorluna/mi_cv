@@ -1,0 +1,11 @@
+@import "/src/styles/variables";
+@import "/src/styles/utils";
+
+.Footer {
+  background-color: aqua;
+}
+
+// // desk mob xs sm md lg xl xxl
+// @include onlyIn(lg) {
+//   background-color: #f28181;
+// }

@@ -1,8 +1,13 @@
 ---
-import style from './LayoutProvider.module.scss';
-type Props = {};
-
-const {} = Astro.props;
+import 'src/styles/_index.scss';
+import Navbar from './Navbar/Navbar.astro';
+import Footer from './Footer/Footer.astro';
 ---
 
-<div class={style['LayoutProvider']}>LayoutProvider Component</div>
+<>
+  <Navbar />
+  <main>
+    <slot />
+  </main>
+  <Footer />
+</>

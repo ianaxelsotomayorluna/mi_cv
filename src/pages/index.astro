@@ -1,13 +1,11 @@
 ---
-import Head from "../containers/home/Head.astro";
-import LayoutProvider from "../layout/LayoutProvider.astro";
-
-
+import Head from '../containers/home/Head.astro';
+import HomeContent from '../containers/home/HomeContent/HomeContent.astro';
+import LayoutProvider from '../layout/LayoutProvider.astro';
 ---
 
 <Head>
-  <body>
-    <h1>Home</h1>
-    <LayoutProvider />
-  </body>
+  <LayoutProvider>
+    <HomeContent />
+  </LayoutProvider>
 </Head>
