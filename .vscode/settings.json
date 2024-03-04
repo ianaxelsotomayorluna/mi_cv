@@ -23,7 +23,7 @@
     "editor.defaultFormatter": "dbaeumer.vscode-eslint"
   },
   "[astro]": {
-    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+    "editor.defaultFormatter": "astro-build.astro-vscode"
   },
   // Asegúrate de que las extensiones no mencionadas usen Prettier como su formateador
   "[html]": {

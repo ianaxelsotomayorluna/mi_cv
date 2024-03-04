@@ -5,6 +5,7 @@
     "**/*.tsx",
     "astro.config.mjs",
     "src/**/*.astro",
+    "src/*.astro",
     "src/**/**/*.astro"
 
     // Añade aquí otros archivos o patrones según sea necesario

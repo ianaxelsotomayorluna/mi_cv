@@ -47,6 +47,7 @@ module.exports = {
         "react/react-in-jsx-scope": "off", // Desactivar reglas específicas de React para .astro
         "react/jsx-uses-react": "off", // Desactivar reglas específicas de React para .astro
         "react/jsx-uses-vars": "off", // Desactivar reglas específicas de React para .astro
+        "react/no-unknown-property": "off",
         // Desactiva cualquier otra regla de React que no sea aplicable a .astro
         "prettier/prettier": "warn",
       },
