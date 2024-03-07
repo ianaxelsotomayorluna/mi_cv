@@ -64,6 +64,8 @@ module.exports = {
         functions: "always-multiline",
       },
     ],
+    "@typescript-eslint/no-unsafe-assignment": "off",
+    "@typescript-eslint/no-unsafe-member-access": "off",
     // Otros ajustes de reglas globales aquí
   },
 };
