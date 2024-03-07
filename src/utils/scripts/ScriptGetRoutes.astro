@@ -1,0 +1,64 @@
+---
+// Construir routeInfo manualmente es necesario para mandarlo al cliente como param
+
+const {
+  hash,
+  host,
+  hostname,
+  href,
+  origin,
+  password,
+  pathname,
+  port,
+  protocol,
+  search,
+  username,
+} = Astro.url;
+
+const routeInfo = {
+  hash,
+  host,
+  hostname,
+  href,
+  origin,
+  password,
+  pathname,
+  port,
+  protocol,
+  search,
+  username,
+};
+---
+
+<route-info {...routeInfo}></route-info>
+
+<script>
+  import { FStore } from '../../store/config/rootAtom';
+
+  class ScriptGetRoutes extends HTMLElement {
+    constructor() {
+      super();
+
+      const routeInfo = {
+        hash: this.attributes.getNamedItem('hash')?.value || undefined,
+        host: this.attributes.getNamedItem('host')?.value || undefined,
+        hostname: this.attributes.getNamedItem('hostname')?.value || undefined,
+        href: this.attributes.getNamedItem('href')?.value || undefined,
+        origin: this.attributes.getNamedItem('origin')?.value || undefined,
+        password: this.attributes.getNamedItem('password')?.value || undefined,
+        pathname: this.attributes.getNamedItem('pathname')?.value || undefined,
+        port: this.attributes.getNamedItem('port')?.value || undefined,
+        protocol: this.attributes.getNamedItem('protocol')?.value || undefined,
+        search: this.attributes.getNamedItem('search')?.value || undefined,
+        username: this.attributes.getNamedItem('username')?.value || undefined,
+      };
+
+      // const routeInfo = this.attributes.getNamedItem('routeInfo')?.
+      document.addEventListener('DOMContentLoaded', () => {
+        FStore.setKey('routeInfo', routeInfo);
+      });
+    }
+  }
+
+  customElements.define('route-info', ScriptGetRoutes);
+</script>

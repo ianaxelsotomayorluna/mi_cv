@@ -35,6 +35,7 @@
     "eslint-plugin-react": "7.33.2",
     "eslint-plugin-react-hooks": "4.6.0",
     "plop": "4.0.1",
-    "sass": "1.71.1"
+    "sass": "1.71.1",
+    "url": "0.11.3"
   }
 }
