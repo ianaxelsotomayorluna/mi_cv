@@ -2,9 +2,11 @@
 import 'src/styles/_index.scss';
 import Navbar from './Navbar/Navbar.astro';
 import Footer from './Footer/Footer.astro';
+import AppGlobalScript from './AppGlobalScript.astro';
 ---
 
 <>
+  <AppGlobalScript />
   <Navbar />
   <main>
     <slot />

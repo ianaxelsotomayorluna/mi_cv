@@ -1,0 +1,39 @@
+---
+
+---
+<script>
+    import { FStore } from "../../store/config/rootAtom";
+
+  (function() {
+    let resizeTimer;
+
+    const screenSizeConfig = [
+        { limit: 576, result: { isMobile: true, winSize: 'xs' } },
+        { limit: 768, result: { isMobile: true, winSize: 'sm' } },
+        { limit: 992, result: { isMobile: false, winSize: 'md' } },
+        { limit: 1200, result: { isMobile: false, winSize: 'lg' } },
+        { limit: 1600, result: { isMobile: false, winSize: 'xl' } },
+        { limit: Infinity, result: { isMobile: false, winSize: 'xxl' } }
+    ] as const;
+
+    const getScreenSize = () => {
+        const width = globalThis.innerWidth;
+        const result = screenSizeConfig!.find(({ limit }) => width < limit)!.result;
+        return {...result, width};
+    };
+
+    const updateScreenSize = () => {
+        const screenSize = getScreenSize()
+        FStore.setKey('screenInfo', screenSize)
+    };
+
+    const onResize = () => {
+        clearTimeout(resizeTimer);
+        resizeTimer = setTimeout(updateScreenSize, 150);
+    };
+
+    globalThis.addEventListener('resize', onResize);
+    document.addEventListener('DOMContentLoaded', updateScreenSize);
+})();
+
+</script>
