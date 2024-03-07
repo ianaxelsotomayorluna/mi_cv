@@ -2,6 +2,8 @@ declare global {
   interface Window {
     __REDUX_DEVTOOLS_EXTENSION__?: ReduxDevtools;
   }
+
+  module "*.module.scss";
 }
 
 export type ReduxDevtools = {

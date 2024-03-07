@@ -12,5 +12,11 @@ export default defineConfig({
         "@node_modules": path.resolve("./node_modules"),
       },
     },
+    css: {
+      modules: {
+        // Esta es la configuración clave para personalizar cómo se generan los identificadores locales
+        generateScopedName: (name) => name,
+      },
+    },
   },
 });
