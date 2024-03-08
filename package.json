@@ -13,6 +13,7 @@
     "generate-rcomp": "npx plop --plopfile generators/plopfileReact.cjs"
   },
   "dependencies": {
+    "@astrojs/check": "^0.5.6",
     "@astrojs/react": "3.0.10",
     "@nanostores/react": "0.7.2",
     "@types/react": "18.2.48",
@@ -23,7 +24,8 @@
     "prettier-plugin-astro": "0.13.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "react-forge-grid": "2.2.2"
+    "react-forge-grid": "2.2.2",
+    "typescript": "^5.4.2"
   },
   "devDependencies": {
     "@types/node": "20.11.24",

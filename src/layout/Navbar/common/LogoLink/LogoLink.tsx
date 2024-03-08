@@ -1,6 +1,6 @@
 import React from "react";
 import style from "./LogoLink.module.scss";
-import TextLogo from "public/sayerBlack.png";
+import TextLogo from "public/sayerBlack.png?jsx";
 
 /**
  * LogoLink Component:  Descripción del comportamiento...
@@ -13,7 +13,7 @@ export const LogoLink = () => {
   return (
     <div className={style["LogoLink"]}>
       <a href="/">
-        <img src={TextLogo.src} />
+        <img src={TextLogo} />
       </a>
     </div>
   );

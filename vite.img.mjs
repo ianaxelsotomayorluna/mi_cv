@@ -3,8 +3,10 @@ import svgo from 'svgo';
 import fs from 'fs';
 import { imagetools } from 'vite-imagetools';
 
+const supportedExtensions = [".jpg", ".jpeg", ".png", ".webp", ".gif", ".avif", ".tiff"];
+
 /**@type {import("vite").PluginOption[]} */
-const imgPlugins = [
+export const imgPlugins = [
   imagetools({
     extendOutputFormats: (builtins) => ({
       ...builtins,

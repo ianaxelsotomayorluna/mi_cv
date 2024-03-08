@@ -4,8 +4,10 @@ import react from "@astrojs/react";
 
 // https://astro.build/config
 export default defineConfig({
+  output: 'static',
   integrations: [react()],
   vite: {
+    // plugins: imgPlugins,
     resolve: {
       alias: {
         src: path.resolve("./src"),

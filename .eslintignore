@@ -43,3 +43,4 @@ postcss.config.js
 /envs
 
 astro.config.mjs
+vite.img.mjs
