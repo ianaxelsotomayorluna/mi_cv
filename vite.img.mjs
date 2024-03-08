@@ -24,6 +24,8 @@ export const imgPlugins = [
             largestImageSize = m.width;
           }
         }
+        console.log('srcSet');
+        console.log(srcSet);
         return {
           srcSet,
           width:
