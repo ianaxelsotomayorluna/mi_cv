@@ -41,3 +41,5 @@ generators
 postcss.config.js
 
 /envs
+
+astro.config.mjs

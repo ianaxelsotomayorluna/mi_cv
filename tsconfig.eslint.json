@@ -4,6 +4,7 @@
     "**/*.ts",
     "**/*.tsx",
     "astro.config.mjs",
+    "imagePlugin.mjs",
     "src/**/*.astro",
     "src/*.astro",
     "src/**/**/*.astro"
