@@ -4,6 +4,8 @@
   "version": "0.0.1",
   "scripts": {
     "dev": "cross-env PUBLIC_DEV_TOOLS=true astro dev",
+    "prod": "npm run build && npm run preview",
+    "_0": "-----------------------------CUSTOM------------------------------------------",
     "start": "astro dev",
     "build": "astro check && astro build",
     "preview": "astro preview",
