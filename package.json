@@ -40,6 +40,7 @@
     "eslint-plugin-react-hooks": "4.6.0",
     "plop": "4.0.1",
     "sass": "1.71.1",
+    "sharp": "0.33.2",
     "url": "0.11.3"
   }
 }

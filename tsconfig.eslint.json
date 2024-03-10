@@ -5,6 +5,7 @@
     "**/*.tsx",
     "astro.config.mjs",
     "imagePlugin.mjs",
+    "sharp-test.ts,"
     "src/**/*.astro",
     "src/*.astro",
     "src/**/**/*.astro"

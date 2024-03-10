@@ -1,6 +1,6 @@
 import React from "react";
 import style from "./LogoLink.module.scss";
-import TextLogo from "public/sayerBlack.png?jsx";
+import TextLogo from "src/assets/sayerBlack.png?jsx";
 
 /**
  * LogoLink Component:  Descripción del comportamiento...

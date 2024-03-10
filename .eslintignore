@@ -44,3 +44,4 @@ postcss.config.js
 
 astro.config.mjs
 vite.img.mjs
+sharp-test.ts

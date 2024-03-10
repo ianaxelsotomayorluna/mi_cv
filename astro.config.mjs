@@ -1,13 +1,14 @@
 import { defineConfig } from "astro/config";
 import path from "path";
 import react from "@astrojs/react";
+import { imgToWebpPlugin } from "./vite.img.mjs";
 
 // https://astro.build/config
 export default defineConfig({
   output: 'static',
   integrations: [react()],
   vite: {
-    // plugins: imgPlugins,
+    plugins: [imgToWebpPlugin],
     resolve: {
       alias: {
         src: path.resolve("./src"),
