@@ -1,0 +1,28 @@
+---
+import style from './InitialLoading.module.scss';
+---
+
+<>
+  <div class={style['InitialLoading']} id="InitialLoading">
+    <p>Combinando colores...</p>
+  </div>
+  <script>
+    import { FStore } from '../../store/config/rootAtom';
+
+    function hideLoader() {
+      const loaderDiv = document.getElementById('InitialLoading');
+      if (loaderDiv) {
+        loaderDiv.remove();
+      }
+    }
+
+    const { off, subscribe } = FStore;
+
+    subscribe((e) => {
+      if (e.appInfo.clientLoaded) {
+        hideLoader();
+        off();
+      }
+    });
+  </script>
+</>

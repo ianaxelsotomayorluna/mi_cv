@@ -1,8 +1,8 @@
 import React from "react";
 import style from "./LogoLink.module.scss";
-import TextLogo from "src/assets/sayerBlack.png?jsx";
+import TextLogo from "src/assets/images/layout/navbar/navLogo.png?jsx";
+import { ImgLoader } from "../../../../common/react/ImgLoader";
 
-const imgProps = exposeSrc(TextLogo)
 /**
  * LogoLink Component:  Descripción del comportamiento...
  */
@@ -14,14 +14,8 @@ export const LogoLink = () => {
   return (
     <div className={style["LogoLink"]}>
       <a href="/">
-        <img {...imgProps} decoding="async" loading="lazy" />
+        <ImgLoader imgImport={TextLogo} />
       </a>
     </div>
   );
 };
-
-export function exposeSrc(src: typeof TextLogo) {
-  if(typeof src === 'string') return {src};
-  if(Array.isArray(src)) return {srcset: src.join(', ')};
-  return {src: src.src}
-}

@@ -1,0 +1,47 @@
+@import "/src/styles/variables";
+@import "/src/styles/utils";
+
+.InitialLoading {
+  font-family: "Inter";
+  display: flex;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+
+  p {
+    font-size: 26px;
+    font-weight: 500;
+    width: 100%;
+    text-align: center;
+    color: #fff; // Color base del texto, lo ponemos blanco para contrastar con el fondo colorido.
+    background: linear-gradient(90deg, #0383ce -0.69%, #a2ff45 34.44%, #ffa944 99.48%);
+    background-size: 200% 200%;
+    animation: gradientAnimation 4s ease infinite;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: all 0.3s ease;
+
+    &:hover {
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+      transform: translateY(-2px);
+    }
+  }
+
+  @keyframes gradientAnimation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+}
+// // desk mob xs sm md lg xl xxl
+// @include onlyIn(lg) {
+//   background-color: #f28181;
+// }

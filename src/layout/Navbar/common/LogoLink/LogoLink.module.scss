@@ -2,12 +2,14 @@
 @import "/src/styles/utils";
 
 .LogoLink {
-  background-color: aqua;
-  a img{
-    width: 100%;
+  font-family: "Inter";
+  padding: 10px 0px;
+  text-align: center;
+  img {
+    width: 160px;
+    height: auto;
   }
 }
-
 // // desk mob xs sm md lg xl xxl
 // @include onlyIn(lg) {
 //   background-color: #f28181;

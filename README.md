@@ -1,7 +1,8 @@
 # Real notes
 - Usa el prefijo PUBLIC_ para poder consumir variables de entorno del lado del cliente (si no sólo serán accesibles en el server)
 - Consume las variables con import.meta.env.VARIABLE en lugar de process.env.VARIABLE
-
+# Utils
+- https://iconify.design/docs/icon-components/react/#iconify-for-react
 
 # Astro Shit
 

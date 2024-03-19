@@ -25,6 +25,7 @@
     const updateScreenSize = () => {
         const screenSize = getScreenSize()
         FStore.setKey('screenInfo', screenSize)
+        FStore.setKey('appInfo.clientLoaded', true)
     };
 
     const onResize = () => {
