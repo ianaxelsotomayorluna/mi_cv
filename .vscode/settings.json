@@ -32,5 +32,36 @@
   "[css]": {
     "editor.defaultFormatter": "esbenp.prettier-vscode"
   },
+  "[scss]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
   // Añade cualquier otra extensión específica que quieras manejar con Prettier
+  "files.eol": "\n"
 }
+
+// { 
+//     "editor.codeActionsOnSave": { 
+//       "source.fixAll.eslint": "explicit" 
+//     }, 
+//     "eslint.validate": [ 
+//       "javascript", 
+//       "javascriptreact", 
+//       "typescript", 
+//       "typescriptreact",
+//       "astro"
+//     ], 
+//     "editor.formatOnSave": false, // Desactiva el formateo predeterminado de VSCode para evitar conflictos. 
+//     "[javascript]": { 
+//       "editor.formatOnSave": false 
+//     }, 
+//     "[javascriptreact]": { 
+//       "editor.formatOnSave": false 
+//     }, 
+//     "[typescript]": { 
+//       "editor.formatOnSave": false 
+//     }, 
+//     "[typescriptreact]": { 
+//       "editor.formatOnSave": false 
+//     } 
+//   }

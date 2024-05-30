@@ -5,7 +5,7 @@
     import { FStore } from "../../store/config/rootAtom";
 
   (function() {
-    let resizeTimer;
+    let resizeTimer: undefined | NodeJS.Timeout;
 
     const screenSizeConfig = [
         { limit: 576, result: { isMobile: true, winSize: 'xs' } },

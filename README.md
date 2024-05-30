@@ -6,6 +6,7 @@
 
 # Astro Shit
 
+
 ```sh
 npm create astro@latest -- --template minimal
 ```

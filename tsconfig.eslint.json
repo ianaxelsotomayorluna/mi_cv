@@ -6,8 +6,12 @@
     "astro.config.mjs",
     "src/**/*.astro",
     "src/*.astro",
-    "src/**/**/*.astro"
-
+    "src/**/*.ts", // Patrón para tus archivos fuente TypeScript
+    "src/*.ts", // Patrón para tus archivos fuente TypeScript
+    "src/env.d.ts",
+    "src/**/**/*.astro",
+    "src",
+    "typings"
     // Añade aquí otros archivos o patrones según sea necesario
   ]
 }

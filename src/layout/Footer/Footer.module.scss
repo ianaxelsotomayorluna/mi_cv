@@ -1,8 +1,32 @@
-@import "/src/styles/variables";
-@import "/src/styles/utils";
+@import '/src/styles/variables';
+@import '/src/styles/utils';
 
 .Footer {
-  background-color: aqua;
+  background-color: #2f2f2f;
+  background-image: url(src/assets/images/layout/footer/redes_sociales_fondo.webp);
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+ 
+  h3{
+    padding: 0;
+    margin: 0;
+    font-family: 'Inter';
+    font-size: 26px;
+    font-weight: 600;
+    color: #fff;
+    text-align: center;
+  }
+
+  .rights {
+    padding: 30px 0 15px 0;
+    color: #fff;
+    text-align: center;
+    font-size: 14px;
+    font-family: 'Courier New', Courier, monospace;
+    a {
+      color: $primaryColor;
+    }
+  }
 }
 
 // // desk mob xs sm md lg xl xxl

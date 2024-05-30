@@ -26,6 +26,7 @@ module.exports = {
       files: ["*.tsx", "*.ts", "*.jsx", "*.js"], // Aplicar estas reglas solo a archivos JavaScript y TypeScript
       rules: {
         // Tus reglas específicas de React/JS/TS aquí
+        "react/react-in-jsx-scope": "off",
       },
     },
     {
@@ -34,6 +35,7 @@ module.exports = {
       parser: "astro-eslint-parser",
       parserOptions: {
         parser: "@typescript-eslint/parser",
+        project: ["./tsconfig.eslint.json"],
         extraFileExtensions: [".astro"],
         sourceType: "module",
         ecmaVersion: 2020,
@@ -50,6 +52,7 @@ module.exports = {
         "react/no-unknown-property": "off",
         // Desactiva cualquier otra regla de React que no sea aplicable a .astro
         "prettier/prettier": "off",
+        "react/jsx-no-undef": "off",
       },
     },
   ],

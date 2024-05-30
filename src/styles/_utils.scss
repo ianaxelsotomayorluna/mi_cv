@@ -41,7 +41,10 @@ $breakpoints: (
   // XXL devices (≥1600px)
   mob: "mob",
   // Mobile devices (<768px)
-  desk: "desk" // Desktop (>768px)
+  mobMD: "mobMD",
+  // Mobile and tablets devices (<992px)
+  desk: "desk", // Desktop (>768px)
+  deskMD: "deskMD" // Desktop larger than 992px (excluding tablet)
 );
 
 @mixin onlyIn($key) {
@@ -78,8 +81,17 @@ $breakpoints: (
     @media (max-width: 767px) {
       @content;
     }
+  } @else if $type == "mobMD" {
+    @media (max-width: 991px) {
+      @content;
+    }
   } @else if $type == "desk" {
     @media (min-width: 768px) {
+      @content;
+    }
+  } 
+  @else if $type == "deskMD" {
+    @media (min-width: 992px) {
       @content;
     }
   }

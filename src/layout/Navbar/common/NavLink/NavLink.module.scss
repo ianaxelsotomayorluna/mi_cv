@@ -1,8 +1,8 @@
-@import "/src/styles/variables";
-@import "/src/styles/utils";
+@import '/src/styles/variables';
+@import '/src/styles/utils';
 
 .NavLink {
-  font-family: "Inter";
+  font-family: 'Inter';
 
   font-size: 20px;
   font-weight: 300;
@@ -10,25 +10,31 @@
   letter-spacing: 0;
   text-align: center;
 
-  color: #1d1d1d;
+  color: #ffffff;
   text-decoration: none;
   cursor: pointer;
   &:hover {
-    color: #0383ce;
+    color: $primaryColor4;
   }
 
   &.active {
-    color: #0383ce;
+    color: $primaryColor9;
     font-weight: 700;
     &::after {
       display: block;
-      content: "";
+      content: '';
       width: 80%;
       margin: auto;
       position: relative;
       bottom: -5px;
       height: 5px;
-      background-image: linear-gradient(90deg, #0383ce -0.69%, #a9fd55 34.44%, #a9fd55 70.11%, #ffe769 99.48%);
+      background-image: linear-gradient(
+        90deg,
+        #f23219 -0.69%,
+        #d12613 34.44%,
+        #b0190d 70.11%,
+        99.48%
+      );
     }
   }
 }

@@ -1,9 +1,10 @@
 ---
 import 'src/styles/_index.scss';
-import Footer from './Footer/Footer.astro';
+import { Footer } from './Footer/Footer';
 import AppGlobalScript from './AppGlobalScript.astro';
 import InitialLoading from './InitialLoading/InitialLoading.astro';
-import { Navbar } from "./Navbar/Navbar";
+import { Navbar } from './Navbar/Navbar';
+import { WhatsButtonFloat } from './WhatsButtonFloat/WhatsButtonFloat';
 ---
 
 <>
@@ -11,9 +12,10 @@ import { Navbar } from "./Navbar/Navbar";
 
   <InitialLoading />
 
-  <Navbar client:visible />
+  <Navbar client:only="react" />
   <main>
     <slot />
   </main>
-  <Footer />
+  <WhatsButtonFloat client:only="react" />
+  <Footer client:only="react" />
 </>

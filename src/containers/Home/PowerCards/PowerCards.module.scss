@@ -1,0 +1,37 @@
+@import '/src/styles/variables';
+@import '/src/styles/utils';
+
+.PowerCards {
+  font-family: 'Inter';
+  h2 {
+    padding: 0;
+    margin: 0;
+    font-family: 'Inter';
+    font-size: 26px;
+    font-weight: 600;
+    color: #fff;
+    text-align: center;
+  }
+
+  @include onlyIn(desk) {
+    max-width: 950px;
+    margin: auto;
+  }
+  img {
+    width: 85%;
+    min-width: 270px;
+    max-width: 380px;
+    height: auto;
+    display: block;
+    margin: auto;
+
+    @include onlyIn(mob) {
+      margin-top: 30px;
+    }
+  }
+}
+
+// // desk mob xs sm md lg xl xxl
+// @include onlyIn(lg) {
+//   background-color: #f28181;
+// }

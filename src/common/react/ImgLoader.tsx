@@ -1,11 +1,17 @@
-import React from "react";
-import { ImgProps } from "../types/html";
+import type { ImgProps } from "src/typings/html";
 
-type Props = {
+type Sizes = "200w" | "400w" | "600w" | "800w" | "1200w" | "1600w";
+
+export type ImgLoaderProps = {
   imgImport: string[] | ImageInfo | string;
   containerClassName?: string;
   containerStyles?: ImgProps["style"];
   imgProps?: ImgProps;
+  /** From tiene que ser le valor minimo del rango y to el máximo */
+  range?: {
+    from: Sizes;
+    to: Sizes;
+  };
 };
 
 /**
@@ -14,15 +20,17 @@ type Props = {
 export const ImgLoader = ({
   imgImport,
   containerClassName,
+  containerStyles,
   imgProps,
-}: Props) => {
+  range,
+}: ImgLoaderProps) => {
   // -----------------------CONSTS, HOOKS, STATES
-  const props = { ...getImageUrl(imgImport), ...imgProps };
+  const props = { ...getImageUrl(imgImport, range), ...imgProps };
 
   // -----------------------MAIN METHODS
   // -----------------------AUX METHODS
-  if (containerClassName)
-    <div className={containerClassName}>
+  if (containerClassName || containerStyles)
+    <div className={containerClassName} style={containerStyles}>
       <Img {...props} />
     </div>;
 
@@ -54,8 +62,30 @@ function Img(
   );
 }
 
-export function getImageUrl(src: Props["imgImport"]) {
+export function getImageUrl(
+  src: ImgLoaderProps["imgImport"],
+  range: ImgLoaderProps["range"],
+) {
   if (typeof src === "string") return { src };
-  if (Array.isArray(src)) return { srcset: src.join(", ") };
+  if (Array.isArray(src)) {
+    const sizeMap = {
+      "200w": 0,
+      "400w": 1,
+      "600w": 2,
+      "800w": 3,
+      "1200w": 4,
+      "1600w": 5,
+    } as const;
+
+    if (range) {
+      const fromIndex = sizeMap[range.from];
+      const toIndex = sizeMap[range.to];
+
+      src = src.filter((_, index) => {
+        return index >= fromIndex && index <= toIndex;
+      });
+    }
+    return { srcset: src.join(", ") };
+  }
   return { src: src.src };
 }

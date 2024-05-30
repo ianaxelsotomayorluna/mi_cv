@@ -4,7 +4,7 @@ import { Drawer } from "antd";
 import { LogoLink } from "../LogoLink/LogoLink";
 import { Fcol, Frow } from "react-forge-grid";
 import { NavLink } from "../NavLink/NavLink";
-import { LocationAndSocial } from "../LocationAndSocial/LocationAndSocial";
+import { AntdProv } from "src/common/react/Providers/AntdProv/AntdProv";
 
 /**
  * useMobileDrawer Component:  Descripción del comportamiento...
@@ -18,22 +18,21 @@ export const useMobileDrawer = () => {
   return {
     handleOpen: setTrue,
     content: (
-      <Drawer title={<LogoLink />} onClose={setFalse} open={value}>
-        <Frow vAlign="middle" hAlign="center" vSpace={10}>
-          <Fcol span={100}>
-            <NavLink href="/" label="Inicio" />
-          </Fcol>
-          <Fcol span={100}>
-            <NavLink href="/productos/" label="Productos" />
-          </Fcol>
-          <Fcol span={100}>
-            <NavLink href="/blog/" label="Blog" />
-          </Fcol>
-          <Fcol>
-            <LocationAndSocial />
-          </Fcol>
-        </Frow>
-      </Drawer>
+      <AntdProv>
+        <Drawer title={<LogoLink />} onClose={setFalse} open={value}>
+          <Frow vAlign="middle" hAlign="center" vSpace={10}>
+            <Fcol span={100}>
+              <NavLink href="/" label="Inicio" />
+            </Fcol>
+            <Fcol span={100}>
+              <NavLink href="/#productos/" label="Productos" />
+            </Fcol>
+            <Fcol span={100}>
+              <NavLink href="/blog/" label="Blog" />
+            </Fcol>
+          </Frow>
+        </Drawer>
+      </AntdProv>
     ),
   };
 };

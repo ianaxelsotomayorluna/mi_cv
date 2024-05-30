@@ -7,6 +7,8 @@
   align-items: center;
   height: 100vh;
   width: 100vw;
+  background: rgb(29,29,29);
+  background: linear-gradient(0deg, rgba(29,29,29,1) 0%, rgba(30,30,30,1) 100%); 
 
   p {
     font-size: 26px;
@@ -14,7 +16,7 @@
     width: 100%;
     text-align: center;
     color: #fff; // Color base del texto, lo ponemos blanco para contrastar con el fondo colorido.
-    background: linear-gradient(90deg, #0383ce -0.69%, #a2ff45 34.44%, #ffa944 99.48%);
+    background: linear-gradient(90deg, #840404 -0.69%, #ce0303 34.44%, #fc9c52 99.48%);
     background-size: 200% 200%;
     animation: gradientAnimation 4s ease infinite;
     padding: 10px;

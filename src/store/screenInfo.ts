@@ -4,7 +4,7 @@ export interface ScreenInfoState {
   width: number;
 }
 
-export const SCREEN_INFO_INIT: ScreenInfoState = {
+export const SCREEN_INFO_INIT: Partial<ScreenInfoState> = {
   isMobile: true,
   winSize: "sm",
   width: 0,

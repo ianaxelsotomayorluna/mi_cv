@@ -6,17 +6,20 @@
     "PUBLIC_DEV_TOOLS": "true"
   },
   "scripts": {
-    "dev": "nodemon --watch src -e tsx,json,scss,ts,astro --exec 'npm run prod'",
+    "dev": "cross-env PUBLIC_DEV_TOOLS=true astro dev",
     "prod": "npm run build && npm run preview",
     "_0": "-----------------------------CUSTOM------------------------------------------",
     "start": "astro dev",
-    "dev.old": "cross-env PUBLIC_DEV_TOOLS=true astro dev",
+    "dev.old": "nodemon --watch src -e tsx,json,scss,ts,astro --exec 'npm run prod'",
     "build": "astro check && cross-env PUBLIC_DEV_TOOLS=true astro build",
     "preview": "astro preview",
     "astro": "astro",
     "_5": "-----------------------------CUSTOM------------------------------------------",
     "generate-acomp": "npx plop --plopfile generators/plopfile.cjs",
-    "generate-rcomp": "npx plop --plopfile generators/plopfileReact.cjs"
+    "generate-rcomp": "npx plop --plopfile generators/plopfileReact.cjs",
+    "generate-page": "npx plop --plopfile generators/plopfilePage.cjs",
+    "/** Note 0 */": "Only works on git bash or linuxs",
+    "lf": "find . -type f ! -path './node_modules/*' -exec sed -i 's/\\r$//' {} +"
   },
   "dependencies": {
     "@astrojs/check": "^0.5.6",
@@ -31,7 +34,8 @@
     "prettier-plugin-astro": "0.13.0",
     "react": "18.2.0",
     "react-dom": "18.2.0",
-    "react-forge-grid": "2.2.2",
+    "react-forge-grid": "2.3.1",
+    "react-social-media-embed": "2.5.13",
     "typescript": "^5.4.2"
   },
   "devDependencies": {
@@ -49,6 +53,10 @@
     "plop": "4.0.1",
     "sass": "1.71.1",
     "sharp": "0.33.2",
-    "url": "0.11.3"
+    "url": "0.11.3",
+    "vite-plugin-svgr": "4.2.0"
+  },
+  "engines": {
+    "node": "18.x"
   }
 }

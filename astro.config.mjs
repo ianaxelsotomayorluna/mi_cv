@@ -2,13 +2,14 @@ import { defineConfig } from "astro/config";
 import path from "path";
 import react from "@astrojs/react";
 import { imgOptimizationPlugins } from "./src/vite/plugins.mjs";
+import svgr from 'vite-plugin-svgr' 
 
 // https://astro.build/config
 export default defineConfig({
   output: 'static',
   integrations: [react()],
   vite: {
-    plugins: imgOptimizationPlugins,
+    plugins: [[svgr()], ...imgOptimizationPlugins],
     resolve: {
       alias: {
         src: path.resolve("./src"),

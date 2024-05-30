@@ -151,7 +151,7 @@ class ImageToWebGen {
       const identifier = `dim-${dimensions}_size-${fileSize}_format-${format}`;
       return identifier;
     } catch (error) {
-      console.error('Error generando el identificador de la imagen:', error);
+      console.error(`Error generando el identificador de la imagen: ${filePath}`, error);
     }
   }
 }

@@ -1,0 +1,11 @@
+---
+import {{pascalCase name}}Head from '../containers/{{pascalCase name}}/{{pascalCase name}}Head.astro';
+import {{pascalCase name}}Content from '../containers/{{pascalCase name}}/{{pascalCase name}}Content.astro';
+import LayoutProvider from '../layout/LayoutProvider.astro';
+---
+
+<{{pascalCase name}}Head>
+  <LayoutProvider>
+    <{{pascalCase name}}Content />
+  </LayoutProvider>
+</{{pascalCase name}}Head>

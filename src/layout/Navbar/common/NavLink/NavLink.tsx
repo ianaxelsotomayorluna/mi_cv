@@ -1,4 +1,3 @@
-import React from "react";
 import style from "./NavLink.module.scss";
 import { useStore } from "@nanostores/react";
 import { FStore } from "../../../../store/config/rootAtom";

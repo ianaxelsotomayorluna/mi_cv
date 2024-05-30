@@ -1,0 +1,16 @@
+@import "/src/styles/variables";
+@import "/src/styles/utils";
+
+
+.WhatsButtonFloat {
+  right: 90px;
+  .ant-float-btn-body {
+    background-color: #1bd741;
+  }
+  text-align: center;
+  svg{
+    color: #fff;
+    font-size: 22px;
+  }
+}
+

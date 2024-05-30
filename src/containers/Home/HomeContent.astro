@@ -1,0 +1,10 @@
+---
+import AstroComp from './AstroComp/AstroComp.astro';
+import style from './HomeContent.module.scss';
+import { PowerCards } from './PowerCards/PowerCards';
+---
+
+<div class={style['HomeContent']}>
+  <PowerCards client:only="react" />
+  <AstroComp />
+</div>

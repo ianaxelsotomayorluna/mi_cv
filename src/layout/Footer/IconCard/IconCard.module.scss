@@ -1,0 +1,31 @@
+@import '/src/styles/variables';
+@import '/src/styles/utils';
+
+.IconCard {
+  color: #fff;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+
+
+  background-color: $primaryColor;
+  width: 40px;
+  height: 40px;
+  font-size: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 9px;
+
+  &:hover {
+    color: $primaryColor2;
+    text-decoration: underline;
+  background-color: $primaryColor8;
+}
+
+}
+
+// // desk mob xs sm md lg xl xxl
+// @include onlyIn(lg) {
+//   background-color: #f28181;
+// }

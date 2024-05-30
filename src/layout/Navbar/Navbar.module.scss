@@ -1,17 +1,21 @@
-@import "/src/styles/variables";
-@import "/src/styles/utils";
-
+@import '/src/styles/variables';
+@import '/src/styles/utils';
 
 .Navbar {
-  background: #eaeaea;
-
+  @include barsGradient();
+  .forge-row-element {
+    @include onlyIn(desk) {
+      height: $headerHeight;
+    }
+  }
+  margin: 0;
   // Necesarias para barrita animada
   position: relative;
 
   // Maqueta y posicionamiento barrita gradiente
   &::before,
   &::after {
-    content: "";
+    content: '';
     position: absolute;
     bottom: -5px;
     left: 0;
@@ -21,13 +25,25 @@
 
   // 2 barritas gradientes superpuestas intercambiando opacidad
   &::before {
-    background-image: linear-gradient(90deg, #0383ce -0.69%, #a9fd55 34.44%, #ffe769 70.11%, #ffa944 99.48%);
+    background-image: linear-gradient(
+      90deg,
+      #d12613 -0.69%,
+      #b0190d 34.44%,
+      #8f0d06 70.11%,
+      #6e0000 99.48%
+    );
     z-index: 1;
   }
   &::after {
-    background-image: linear-gradient(90deg, #ffa944 -0.69%, #ffe769 34.44%, #0383ce 70.11%, #a9fd55 99.48%);
+    background-image: linear-gradient(
+      90deg,
+      #6e0000 -0.69%,
+      #8f0d06 34.44%,
+      #b0190d 70.11%,
+      #d12613 99.48%
+    );
     z-index: 2;
-    animation: bottomAnimation 3s linear infinite;
+    animation: bottomAnimation 1s linear infinite;
     opacity: 0;
   }
 
@@ -42,7 +58,7 @@
     padding-inline: 10px;
     margin-bottom: 15px;
     &:hover {
-      color: #0383ce;
+      color: #ff0000;
       box-shadow: none;
     }
   }
@@ -58,7 +74,6 @@
     opacity: 1;
   }
 }
-
 
 // // desk mob xs sm md lg xl xxl
 // @include onlyIn(lg) {

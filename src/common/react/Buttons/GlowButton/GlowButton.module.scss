@@ -1,0 +1,82 @@
+@import '/src/styles/variables';
+@import '/src/styles/utils';
+
+.GlowButton {
+  font-weight: 700;
+  font-size: 18px;
+  white-space: normal;
+  height: fit-content;
+  padding: 6px 20px;
+  position: relative;
+  z-index: 3;
+  border: transparent;
+  border-radius: 50px;
+
+  &-dark {
+    color: $light;
+    background: linear-gradient(89.89deg, $dark2 -1.83%, $dark5 105.61%);
+    //background: transparent;
+    &:hover {
+      color: #fc5b5b !important;
+      &::before {
+        opacity: 0;
+      }
+    }
+    &::before {
+      content: '';
+      background: linear-gradient(45deg, $dark3, $dark6);
+      background-size: 200%;
+      width: calc(100% + 2px);
+      height: calc(100% + 2px);
+      position: absolute;
+      top: -1px;
+      left: -1px;
+      z-index: -1;
+      border-radius: 50px;
+      filter: blur(8px);
+      animation: glowing 4s linear infinite;
+      transition: opacity 0.6s ease-in-out;
+    }
+  }
+  &-pink {
+    color: $light;
+    background-color: $primaryColor3;
+    background: linear-gradient(89.89deg, $primaryColor -1.83%, $primaryColor5 105.61%);
+    &:hover {
+      color: $light3 !important;
+      &::before {
+        opacity: 0;
+      }
+    }
+    &::before {
+      content: '';
+      background: linear-gradient(45deg, $primaryColor7, $primaryColor9);
+      background-size: 200%;
+      width: calc(100% + 2px);
+      height: calc(100% + 2px);
+      position: absolute;
+      top: -1px;
+      left: -1px;
+      z-index: -1;
+      border-radius: 50px;
+      filter: blur(8px);
+      animation: glowing 6s linear infinite;
+      transition: opacity 0.6s ease-in-out;
+    }
+  }
+}
+
+//-----------------ExampleCont
+
+
+@keyframes glowing {
+  0% {
+    background-position: 100% 0;
+  }
+  50% {
+    background-position: 0 0;
+  }
+  100% {
+    background-position: 100% 0;
+  }
+}

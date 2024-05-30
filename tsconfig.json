@@ -8,6 +8,9 @@
       "src/*": ["./src/*"]
     }
   },
+  "include": [
+    "src", "typings"
+  ],
   "files": ["./.eslintrc.cjs"],
  
 }

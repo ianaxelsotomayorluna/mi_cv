@@ -1,6 +1,5 @@
-import React from "react";
 import style from "./LogoLink.module.scss";
-import TextLogo from "src/assets/images/layout/navbar/navLogo.png?jsx";
+import TextLogo from "src/assets/images/layout/navbar/logo.png?jsx";
 import { ImgLoader } from "../../../../common/react/ImgLoader";
 
 /**
@@ -14,7 +13,7 @@ export const LogoLink = () => {
   return (
     <div className={style["LogoLink"]}>
       <a href="/">
-        <ImgLoader imgImport={TextLogo} />
+        <ImgLoader imgImport={TextLogo} range={{ from: "200w", to: "400w" }} />
       </a>
     </div>
   );
