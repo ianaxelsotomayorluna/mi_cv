@@ -1,6 +1,6 @@
 //----------------------Main Colors------------------
 //----------------------Primary
-$primaryColor: #e90101;
+$primaryColor: #00f0ff;
 $primaryColor1: mix($primaryColor, white, 10%);
 $primaryColor2: mix($primaryColor, white, 20%);
 $primaryColor3: mix($primaryColor, white, 30%);
@@ -21,7 +21,6 @@ $primaryColor17: mix($primaryColor, black, 30%);
 $primaryColor18: mix($primaryColor, black, 20%);
 $primaryColor19: mix($primaryColor, black, 10%);
 $primaryColor20: mix($primaryColor, black, 0%);
-
 
 //----------------------Dark
 $dark: #000000;
@@ -54,7 +53,7 @@ $colorSuccess: #3ab415;
 $colorWarning: #f1df17;
 $colorError: #ff4d4f;
 
-@mixin barsGradient(){
+@mixin barsGradient() {
   background-image: linear-gradient(
     to right,
     #11111b 0%,

@@ -8,11 +8,10 @@
 
   padding-bottom: 30px; //Espacio arriba del footer
 
-  background: rgb(29,29,29);
-  background: linear-gradient(0deg, rgba(29,29,29,1) 0%, rgba(30,30,30,1) 100%); 
+  background-image: url(src/assets/images/Fondo/fondodelhome/Fondo.jpg);
 
+  padding-top: 100px;
 }
-
 
 // // desk mob xs sm md lg xl xxl
 // @include onlyIn(lg) {

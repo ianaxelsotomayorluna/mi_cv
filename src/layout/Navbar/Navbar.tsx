@@ -20,7 +20,7 @@ export const Navbar = () => {
   // -----------------------RENDER
   return (
     <header className={style.Navbar}>
-      <Frow vAlign="middle" hAlign="center">
+      <Frow className="flotingNav" vAlign="middle" hAlign="center">
         <Fcol {...customResponsive(25, 100)}>
           <LogoLink />
         </Fcol>

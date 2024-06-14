@@ -24,7 +24,7 @@ export const PowerCards = () => {
   // -----------------------RENDER
   return (
     <div className={style["PowerCards"]}>
-      <h2>React Example: {String(value)}</h2>
+      <h2>Ian Axel Sotomayor Luna</h2>
       <Frow hAlign="center">
         <Fcol {...basicResponsive(33)}>
           <ScrollAnimate always delay={0}>

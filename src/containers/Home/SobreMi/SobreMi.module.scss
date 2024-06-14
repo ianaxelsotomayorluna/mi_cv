@@ -1,0 +1,64 @@
+@import "/src/styles/variables";
+@import "/src/styles/utils";
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #000;
+  color: #fff;
+}
+
+.sobreMi {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.contenido {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.imagen img {
+  width: 400px;
+  height: 400px;
+  object-fit: cover;
+  margin-right: 80px;
+}
+
+.texto {
+  max-width: 600px;
+}
+
+.texto h1 {
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.texto p {
+  margin-bottom: 15px;
+}
+
+.botones {
+  display: flex;
+  gap: 10px;
+}
+
+.boton,
+.portafolio {
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  color: #fff;
+}
+
+.boton {
+  background-color: #007bff;
+}
+
+.portafolio {
+  background-color: #333;
+}
