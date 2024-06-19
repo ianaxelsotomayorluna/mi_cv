@@ -1,54 +1,48 @@
 @import "/src/styles/variables";
 @import "/src/styles/utils";
 
-body {
+.sobreMi {
   margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: #000;
+  font-family: "Inter";
   color: #fff;
 }
 
-.sobreMi {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-}
-
-.contenido {
-  display: flex;
-  align-items: center;
-  padding: 20px;
-  border-radius: 10px;
-}
-
 .imagen img {
-  width: 400px;
-  height: 400px;
-  object-fit: cover;
-  margin-right: 80px;
+  width: 92%;
+  height: auto;
+  margin: auto;
+  display: block;
+  max-width: 400px;
 }
 
 .texto {
+  //
+  // // desk mob xs sm md lg xl xxl
+  @include onlyIn(mob) {
+    margin-top: 50px;
+  }
   max-width: 600px;
 }
 
 .texto h1 {
-  font-size: 2em;
+  font-size: 60px;
   margin-bottom: 10px;
 }
 
 .texto p {
   margin-bottom: 15px;
+  font-size: 20px;
 }
 
 .botones {
   display: flex;
+  justify-content: space-evenly;
   gap: 10px;
 }
 
 .boton,
 .portafolio {
+  margin-top: 30px;
   padding: 10px 20px;
   border-radius: 5px;
   text-decoration: none;

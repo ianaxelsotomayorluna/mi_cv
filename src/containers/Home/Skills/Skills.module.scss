@@ -1,0 +1,25 @@
+@import "/src/styles/variables";
+@import "/src/styles/utils";
+
+.Skills {
+  font-family: "Inter";
+  h1 {
+    color: antiquewhite;
+    font-size: 50px;
+    width: 92%;
+    margin: auto;
+  }
+  .contenido {
+    background-color: #101010;
+    border: 2px #1468b5 solid;
+    border-radius: 15px;
+    width: 92%;
+    margin: auto;
+  }
+  img {
+    display: block;
+    width: 94%;
+    margin: 10px auto;
+    height: auto;
+  }
+}
