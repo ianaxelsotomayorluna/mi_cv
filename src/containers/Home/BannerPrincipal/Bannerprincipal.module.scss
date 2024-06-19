@@ -2,11 +2,47 @@
 @import "/src/styles/utils";
 
 .Bannerprincipal {
-  img {
-    width: 100%;
-    height: auto;
-    display: block;
-    max-width: 100%;
-    margin-top: 0%;
+  background: url("src/assets/images/Banner1/FondoBanner.png");
+  font-family: "Inter";
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  color: #fff;
+}
+.Info {
+  //
+  // // desk mob xs sm md lg xl xxl
+  max-width: 50%;
+  text-align: left;
+  h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    font-weight: bold;
+    line-height: 1.2;
+  }
+
+  p {
+    font-size: 1.2rem;
+    line-height: 1.5;
+    margin-bottom: 20px;
+
+    a {
+      color: #fff;
+      text-decoration: underline;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+  .imagen {
+    max-width: 50%;
+    text-align: right;
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
   }
 }
