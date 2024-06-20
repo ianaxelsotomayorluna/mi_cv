@@ -1,6 +1,8 @@
 import { Fcol, Frow } from "react-forge-grid";
 import style from "./Bannerprincipal.module.scss";
 import { customResponsive } from "src/utils/functions/responsiveUtils";
+import Bagheera from "src/assets/images/Banner1/ImagenLogo.png?jsx";
+import { ImgLoader } from "src/common/react/ImgLoader";
 
 /**
  * Bannerprincipal Component:  Descripción del comportamiento...
@@ -18,7 +20,7 @@ export const Bannerprincipal = () => {
             <h1>Ian Axel </h1>
             <h1>Sotomayor Luna</h1>
             <p>
-              Soy un diseñador gráfico y UX/UI en
+              Soy un diseñador gráfico y UX/UI en{" "}
               <a href="https://forgemytech.com">forgemytech.com</a>
             </p>
             <p>
@@ -29,8 +31,11 @@ export const Bannerprincipal = () => {
           </div>
         </Fcol>
         <Fcol {...customResponsive(50, 100)}>
-          <div className={style.image}>
-            <img src="src/assets/images/Banner1/ImagenLogo.png" alt="Banner" />
+          <div className={style["image"]}>
+            <ImgLoader
+              imgImport={Bagheera}
+              range={{ from: "200w", to: "400w" }}
+            />
           </div>
         </Fcol>
       </Frow>
