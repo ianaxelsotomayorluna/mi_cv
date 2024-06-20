@@ -11,7 +11,7 @@ export const Bannerprincipal = () => {
   // -----------------------AUX METHODS
   // -----------------------RENDER
   return (
-    <div className={style["Bannerprincipal"]}>
+    <div className={style.Bannerprincipal}>
       <Frow hAlign="center" vAlign="middle">
         <Fcol {...customResponsive(50, 100)}>
           <div className={style.info}>
@@ -29,12 +29,11 @@ export const Bannerprincipal = () => {
           </div>
         </Fcol>
         <Fcol {...customResponsive(50, 100)}>
-          <div className={style.imagen}>
+          <div className={style.image}>
             <img src="src/assets/images/Banner1/ImagenLogo.png" alt="Banner" />
           </div>
         </Fcol>
       </Frow>
-      <img />
     </div>
   );
 };

@@ -21,17 +21,17 @@
   -webkit-backdrop-filter: blur(10px); /* Soporte para Safari */
   border: 2px solid #00f0ff;
   box-sizing: border-box;
-
+  .LogoLink {
+    margin-left: 20px;
+  }
   .hamburger {
-    margin-top: 10px;
     background: none;
+    margin-left: 30px;
     border: none;
+    color: aliceblue;
     cursor: pointer;
     font-size: 28px;
-    box-shadow: 1px 2px 1px 2px #757575;
-    border-radius: 4px;
     padding-inline: 10px;
-    margin-bottom: 15px;
     &:hover {
       color: #00f0ff;
       box-shadow: none;

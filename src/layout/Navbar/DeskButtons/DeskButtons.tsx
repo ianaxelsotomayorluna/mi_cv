@@ -15,7 +15,7 @@ export const DeskButtons = () => {
     <>
       <Fcol {...customResponsive(30, 100)}></Fcol>
       <Fcol {...customResponsive(15, 50)}>
-        <NavLink href="/" label="Inicio" />
+        <NavLink href="/incio" label="Inicio" />
       </Fcol>
       <Fcol {...customResponsive(15, 50)}>
         <NavLink href="/#sobre mi" label="sobre mi" />
