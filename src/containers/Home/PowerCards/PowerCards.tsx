@@ -16,7 +16,7 @@ import { useBoolean } from "src/utils/hooks/useBoolean";
  */
 export const PowerCards = () => {
   // -----------------------CONSTS, HOOKS, STATES
-  const { toggle, value } = useBoolean();
+  const { toggle } = useBoolean();
   const { screenInfo } = useStore(FStore, { keys: ["screenInfo"] });
   const isMobile = screenInfo.isMobile;
   // -----------------------MAIN METHODS
