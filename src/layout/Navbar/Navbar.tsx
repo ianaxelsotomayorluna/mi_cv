@@ -21,12 +21,12 @@ export const Navbar = () => {
   return (
     <header className={style.Navbar}>
       <Frow className="flotingNav" vAlign="middle" hAlign="center">
-        <Fcol {...customResponsive(25, 100)}>
+        <Fcol {...customResponsive(25, 50)}>
           <LogoLink />
         </Fcol>
         {screenInfo.isMobile ? (
           <>
-            <Fcol {...customResponsive(15, 50)}>
+            <Fcol {...customResponsive(25, 50)}>
               <button className="hamburger" onClick={handleOpen}>
                 <Icon icon="charm:menu-hamburger" />
               </button>
