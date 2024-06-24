@@ -15,25 +15,21 @@ import Frontend from "src/assets/images/Skills/Frontend.png?jsx";
 import Branding from "src/assets/images/Skills/Branding.png?jsx";
 import VsCode from "src/assets/images/Skills/VsCode.png?jsx";
 
-interface Skill {
-  img: string;
-}
-
-export const skillsInfo: Skill[] = [
-  { img: Photoshop },
-  { img: AfterEffects },
-  { img: Illustrator },
-  { img: Indesing },
-  { img: AdobeXD },
-  { img: ChatGPT },
-  { img: MidJourney },
-  { img: CSS },
-  { img: HTML },
-  { img: TypeScript },
-  { img: Figma },
-  { img: StableDiffusion },
-  { img: VsCode },
-  { img: UI },
-  { img: Frontend },
-  { img: Branding },
+export const skillsInfo = [
+  { img: Photoshop, nombre: "Photoshop" },
+  { img: AfterEffects, nombre: "AfterEffects" },
+  { img: Illustrator, nombre: "Illustrator" },
+  { img: Indesing, nombre: "Indesing" },
+  { img: AdobeXD, nombre: "AdobeXD" },
+  { img: ChatGPT, nombre: "ChatGPT" },
+  { img: MidJourney, nombre: "MidJourney" },
+  { img: CSS, nombre: "CSS" },
+  { img: HTML, nombre: "HTML" },
+  { img: TypeScript, nombre: "TypeScript" },
+  { img: Figma, nombre: "Figma" },
+  { img: StableDiffusion, nombre: "StableDiffusion" },
+  { img: VsCode, nombre: "VsCode" },
+  { img: UI, nombre: "UI" },
+  { img: Frontend, nombre: "Frontend" },
+  { img: Branding, nombre: "Branding" },
 ];
