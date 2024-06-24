@@ -8,8 +8,8 @@ import {Skills} from './Skills/Skills';
 ---
 
 <div class={style['HomeContent']}>
-  <Bannerprincipal />
-  <SobreMi />
-  <Skills />
+  <Bannerprincipal client:only="react" />
+  <SobreMi client:only="react"/>
+  <Skills client:only="react" />
   <PowerCards client:only="react" />
 </div>
