@@ -8,7 +8,6 @@ import Img3 from "src/assets/images/Home/PowerCards/Card3.png?jsx";
 import { ScrollAnimate } from "src/common/react/ScrollAnimate/ScrollAnimate";
 import { useStore } from "@nanostores/react";
 import { FStore } from "src/store/config/rootAtom";
-import { Button } from "antd";
 import { useBoolean } from "src/utils/hooks/useBoolean";
 
 /**
@@ -16,7 +15,7 @@ import { useBoolean } from "src/utils/hooks/useBoolean";
  */
 export const PowerCards = () => {
   // -----------------------CONSTS, HOOKS, STATES
-  const { toggle } = useBoolean();
+  useBoolean();
   const { screenInfo } = useStore(FStore, { keys: ["screenInfo"] });
   const isMobile = screenInfo.isMobile;
   // -----------------------MAIN METHODS
@@ -24,7 +23,7 @@ export const PowerCards = () => {
   // -----------------------RENDER
   return (
     <div className={style["PowerCards"]}>
-      <h2>Ian Axel Sotomayor Luna</h2>
+      <h2>Trayectoria</h2>
       <Frow hAlign="center">
         <Fcol {...basicResponsive(33)}>
           <ScrollAnimate always delay={0}>
@@ -42,7 +41,6 @@ export const PowerCards = () => {
           </ScrollAnimate>
         </Fcol>
       </Frow>
-      <Button onClick={toggle}>Antd Button</Button>
     </div>
   );
 };

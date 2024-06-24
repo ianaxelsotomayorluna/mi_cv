@@ -19,7 +19,7 @@ export const Skills: React.FC = () => {
             <Fcol {...customResponsive(12, 50)} key={`skillimage-${i}`}>
               <ImgLoader
                 imgImport={element.img}
-                range={{ from: "800w", to: "1200w" }}
+                range={{ from: "800w", to: "800w" }}
               />
             </Fcol>
           ))}
