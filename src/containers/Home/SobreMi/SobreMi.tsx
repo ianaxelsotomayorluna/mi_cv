@@ -13,7 +13,7 @@ export const SobreMi = () => {
   // -----------------------AUX METHODS
   // -----------------------RENDER
   return (
-    <section className={style.sobreMi}>
+    <section id="sobre-mi" className={style.sobreMi}>
       <Frow hAlign="center" vAlign="middle">
         <Fcol {...customResponsive(50, 100)}>
           <div className={style.imagen}>

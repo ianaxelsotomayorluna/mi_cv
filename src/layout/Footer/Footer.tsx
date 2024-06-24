@@ -17,16 +17,16 @@ export const Footer = () => {
   // -----------------------AUX METHODS
   // -----------------------RENDER
   return (
-    <footer className={style["Footer"]}>
+    <footer id="contacto" className={style["Footer"]}>
       <h3>Contáctame</h3>
       <Frow hAlign="center">
-        <Fcol {...basicResponsive(25)}>
+        <Fcol {...basicResponsive(33)}>
           <div className="card">
             <Icon icon="material-symbols:mail-outline" />
             <h5>ianaxelsotomayorluna@gmail.com</h5>
           </div>
         </Fcol>
-        <Fcol {...basicResponsive(25)}>
+        <Fcol {...basicResponsive(33)}>
           <a
             href={WHATS_INFO[urlType]}
             target="_blank"
@@ -35,6 +35,18 @@ export const Footer = () => {
             <div className="card">
               <Icon icon="mingcute:whatsapp-line" />
               <h5>{WHATS_INFO.channelName}</h5>
+            </div>
+          </a>
+        </Fcol>
+        <Fcol {...basicResponsive(33)}>
+          <a
+            href="https://www.linkedin.com/in/ian-axel-sotomayor-luna-884088316?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <div className="card">
+              <Icon icon="mdi:linkedin" />
+              <h5> Ian Axel Sotomayor Luna</h5>
             </div>
           </a>
         </Fcol>

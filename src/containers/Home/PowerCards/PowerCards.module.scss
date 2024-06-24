@@ -3,13 +3,14 @@
 
 .PowerCards {
   font-family: "Inter";
-  background-image: url(src/assets/images/Home/PowerCards/FondoCards.png);
+
   background-size: 100%;
   padding-inline: 20px;
   padding-bottom: 60px;
   @include onlyIn(desk) {
     max-width: 990px;
     margin: auto;
+    background-image: url(src/assets/images/Home/PowerCards/FondoCards.png);
   }
   h2 {
     padding: 0;

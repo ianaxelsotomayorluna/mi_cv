@@ -13,7 +13,7 @@ export const Bannerprincipal = () => {
   // -----------------------AUX METHODS
   // -----------------------RENDER
   return (
-    <div className={style.Bannerprincipal}>
+    <div id="inicio" className={style.Bannerprincipal}>
       <Frow hAlign="center" vAlign="middle">
         <Fcol {...customResponsive(50, 100)}>
           <div className={style.info}>
