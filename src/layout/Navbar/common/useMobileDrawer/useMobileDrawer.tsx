@@ -25,10 +25,10 @@ export const useMobileDrawer = () => {
               <NavLink href="/" label="Inicio" />
             </Fcol>
             <Fcol span={100}>
-              <NavLink href="/#productos/" label="Productos" />
+              <NavLink href="/#Sobre mi/" label="Sobre mi" />
             </Fcol>
             <Fcol span={100}>
-              <NavLink href="/blog/" label="Blog" />
+              <NavLink href="/Trayectoria/" label="Trayectoria" />
             </Fcol>
           </Frow>
         </Drawer>
