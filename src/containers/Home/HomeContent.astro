@@ -1,5 +1,5 @@
 ---
-
+import AstroComp from './AstroComp/AstroComp.astro';
 import style from './HomeContent.module.scss';
 import { PowerCards } from './PowerCards/PowerCards';
 import {Bannerprincipal}   from './BannerPrincipal/BannerPrincipal';
@@ -12,4 +12,6 @@ import {Skills} from './Skills/Skills';
   <SobreMi />
   <Skills />
   <PowerCards client:only="react" />
+  <PowerCards client:only="react" />
+  <AstroComp />
 </div>

@@ -34,7 +34,7 @@ export const Bannerprincipal = () => {
           <div className={style["image"]}>
             <ImgLoader
               imgImport={Bagheera}
-              range={{ from: "800w", to: "1200w" }}
+              range={{ from: "200w", to: "400w" }}
             />
           </div>
         </Fcol>
