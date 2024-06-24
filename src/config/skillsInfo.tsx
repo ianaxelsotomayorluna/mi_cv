@@ -1,27 +1,39 @@
-export const skillsInfo = [
-  { imagen: "src/assets/images/Skills/Photoshop.png", nombre: "Photoshop" },
-  {
-    imagen: "src/assets/images/Skills/AfterEffects.png",
-    nombre: "After Effects",
-  },
-  {
-    imagen: "src/assets/images/Skills/AfterEffects.png",
-    nombre: "After Effects",
-  },
-  { imagen: "src/assets/images/Skills/Indesing.png", nombre: "Indesing" },
-  { imagen: "src/assets/images/Skills/AdobeXD.png", nombre: "Adobe XD" },
-  { imagen: "src/assets/images/Skills/ChatGPT.png", nombre: "Chat GPT" },
-  { imagen: "src/assets/images/Skills/MidJourney.png", nombre: "Mid Journey" },
-  { imagen: "src/assets/images/Skills/CSS.png", nombre: "CSS" },
-  { imagen: "src/assets/images/Skills/typeScript.png", nombre: "Type Script" },
-  { imagen: "src/assets/images/Skills/VsCode.png", nombre: "Vs Code" },
-  { imagen: "src/assets/images/Skills/UI.png", nombre: "" },
-  { imagen: "src/assets/images/Skills/Branding.png", nombre: "" },
-  { imagen: "src/assets/images/Skills/Frontend.png", nombre: "" },
-  { imagen: "src/assets/images/Skills/Figma.png", nombre: "Figma" },
-  {
-    imagen: "src/assets/images/Skills/StableDiffusion.png",
-    nombre: "Stable Diffusion",
-  },
-  { imagen: "src/assets/images/Skills/HTML.png", nombre: "HTML" },
+import Photoshop from "src/assets/images/Skills/Photoshop.png?jsx";
+import AfterEffects from "src/assets/images/Skills/AfterEffects.png?jsx";
+import Illustrator from "src/assets/images/Skills/Illustrator.png?jsx";
+import Indesing from "src/assets/images/Skills/Indesing.png?jsx";
+import AdobeXD from "src/assets/images/Skills/AdobeXD.png?jsx";
+import ChatGPT from "src/assets/images/Skills/ChatGPT.png?jsx";
+import MidJourney from "src/assets/images/Skills/MidJourney.png?jsx";
+import CSS from "src/assets/images/Skills/CSS.png?jsx";
+import HTML from "src/assets/images/Skills/HTML.png?jsx";
+import TypeScript from "src/assets/images/Skills/TypeScript.png?jsx";
+import UI from "src/assets/images/Skills/UI.png?jsx";
+import Figma from "src/assets/images/Skills/Figma.png?jsx";
+import StableDiffusion from "src/assets/images/Skills/StableDiffusion.png?jsx";
+import Frontend from "src/assets/images/Skills/Frontend.png?jsx";
+import Branding from "src/assets/images/Skills/Branding.png?jsx";
+import VsCode from "src/assets/images/Skills/VsCode.png?jsx";
+
+interface Skill {
+  img: string;
+}
+
+export const skillsInfo: Skill[] = [
+  { img: Photoshop },
+  { img: AfterEffects },
+  { img: Illustrator },
+  { img: Indesing },
+  { img: AdobeXD },
+  { img: ChatGPT },
+  { img: MidJourney },
+  { img: CSS },
+  { img: HTML },
+  { img: TypeScript },
+  { img: Figma },
+  { img: StableDiffusion },
+  { img: VsCode },
+  { img: UI },
+  { img: Frontend },
+  { img: Branding },
 ];
