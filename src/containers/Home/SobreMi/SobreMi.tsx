@@ -2,7 +2,8 @@ import { Fcol, Frow } from "react-forge-grid";
 import style from "./SobreMi.module.scss";
 import React from "react";
 import { customResponsive } from "src/utils/functions/responsiveUtils";
-
+import FotoPersonal from "src/assets/images/FotoPersonal/foto.png?jsx";
+import { ImgLoader } from "src/common/react/ImgLoader";
 /**
  * SobreMi Component:  Descripción del comportamiento...
  */
@@ -16,9 +17,9 @@ export const SobreMi = () => {
       <Frow hAlign="center" vAlign="middle">
         <Fcol {...customResponsive(50, 100)}>
           <div className={style.imagen}>
-            <img
-              src="src/assets/images/FotoPersonal/Foto.png"
-              alt="FotoPersonal"
+            <ImgLoader
+              imgImport={FotoPersonal}
+              range={{ from: "800w", to: "1200w" }}
             />
           </div>
         </Fcol>

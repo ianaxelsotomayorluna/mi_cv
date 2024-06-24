@@ -3,11 +3,9 @@ import style from "./Skills.module.scss";
 import React from "react";
 import { skillsInfo } from "src/config/skillsInfo";
 import { customResponsive } from "src/utils/functions/responsiveUtils";
+import { ImgLoader } from "src/common/react/ImgLoader";
 
-/**
- * Skills Component:  Descripción del comportamiento...
- */
-export const Skills = () => {
+export const Skills: React.FC = () => {
   // -----------------------CONSTS, HOOKS, STATES
   // -----------------------MAIN METHODS
   // -----------------------AUX METHODS
@@ -19,7 +17,10 @@ export const Skills = () => {
         <Frow hAlign="center">
           {skillsInfo.map((element, i) => (
             <Fcol {...customResponsive(12, 50)} key={`skillimage-${i}`}>
-              <img src={element.imagen} alt={element.nombre} />
+              <ImgLoader
+                imgImport={element.img}
+                range={{ from: "800w", to: "800w" }}
+              />
             </Fcol>
           ))}
         </Frow>
