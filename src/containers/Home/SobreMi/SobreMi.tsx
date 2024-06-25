@@ -31,9 +31,9 @@ export const SobreMi = () => {
               interesantes, por el momento prefiero trabajo remoto.
             </p>
             <p>
-              Soy alguien que siempre busca estar actualizado, siempre
-              comprometido con resultados y calidad proveyendo la mejor
-              experiencia para todos.
+              Soy una persona que se esfuerza constantemente por mantenerse
+              actualizada, siempre comprometido con ofrecer resultados de alta
+              calidad y proporcionando la mejor experiencia para todos.
             </p>
             <p>
               Me preocupo por mi equipo, los clientes, el usuario final y la
