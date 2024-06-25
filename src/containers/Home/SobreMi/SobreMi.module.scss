@@ -31,11 +31,19 @@
 .texto h1 {
   font-size: 60px;
   margin-bottom: 10px;
+  @include onlyIn(mob) {
+    font-size: 50px;
+    margin-left: 8px;
+  }
 }
 
 .texto p {
   margin-bottom: 15px;
   font-size: 20px;
+  @include onlyIn(mob) {
+    font-size: 15px;
+    margin-left: 8px;
+  }
 }
 
 .botones {
