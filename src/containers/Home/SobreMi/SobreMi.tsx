@@ -41,7 +41,7 @@ export const SobreMi = () => {
             </p>
             <div className={style.botones}>
               <a
-                href="src\assets\CV\IanCV.pdf"
+                href="assets/CV/IanCV.pdf"
                 className={style.boton}
                 target="_blank"
                 rel="noopener noreferrer"
